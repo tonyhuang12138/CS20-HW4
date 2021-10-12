@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            background-color: #F0A97A;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Joe's Hotdogs!</h1>
+    <script lang="JavaScript">
+        var hotdogs, fries, drinks, hTotal, fTotal, dTotal, subtotal, total, discount = 0;
+        // 1. Prompt for quantity of each        
+        hotdogs = prompt("How many hotdogs would you like");
+        fries = prompt("How many fries would you like");
+        drinks = prompt("How many drinks would you like");
+        // 2. Calculate subtotal
+        hTotal = hotdogs * 3.75;
+        fTotal = fries * 2.00;
+        dTotal = drinks * 1.50;
+        // 3. 10% discount if over $20
+        subtotal = hTotal + fTotal + dTotal;
+        if (subtotal >= 20) {
+            discount = -subtotal * .1;
+            subtotal = subtotal * .9;
+        }
+        // 4. 6.25% state tax
+        tax = subtotal * 0.0625;
+        total = subtotal * 1.0625;
+    </script>
+    <!-- 5. Display all info -->
+    <table style="width:70%">
+        <tr>
+            <th>Items</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Hotdogs</td>
+            <td>
+                <div align="center">
+                    <script>
+                        document.write(hotdogs);
+                    </script>
+                </div>
+            </td>
+            <td>$
+                <script>
+                    document.write((hTotal).toFixed(2));
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>French Fries</td>
+            <td>
+                <div align='center'>
+                    <script>
+                        document.write(fries);
+                    </script>
+                </div>
+            </td>
+            <td>$
+                <script>
+                    document.write((fTotal).toFixed(2));
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>Drinks</td>
+            <td>
+                <div align="center">
+                    <script>
+                        document.write(drinks);
+                    </script>
+                </div>
+
+            </td>
+            <td>$
+                <script>
+                    document.write((dTotal).toFixed(2));
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>Subtotal</td>
+            <td>
+                <div align="center">-</div>
+            </td>
+            <td>$
+                <script>
+                    document.write((subtotal).toFixed(2));
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>Discount</td>
+            <td>
+                <div align="center">-</div>
+            </td>
+            <td>$
+                <script>
+                    document.write((discount).toFixed(2));
+                </script>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td>
+                <div align="center">-</div>
+            </td>
+            <td>$
+                <script>
+                    document.write((tax).toFixed(2));
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>
+                <div align="center">-</div>
+            </td>
+            <td>$
+                <script>
+                    document.write((total).toFixed(2));
+                </script>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+</body>
+
+</html>

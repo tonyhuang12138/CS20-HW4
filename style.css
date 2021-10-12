@@ -1,0 +1,15 @@
+table, th, td {
+    border: 1px solid #339DA3;
+    color: #FBF5F1;
+    padding: 0.8rem;
+    margin: auto;
+}
+
+table {
+    line-height: 1rem;
+}
+
+h1 {
+    text-align: center;
+    color: #7AE9F0;
+}
